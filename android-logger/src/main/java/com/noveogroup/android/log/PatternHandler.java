@@ -30,6 +30,7 @@ import android.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Formatter;
+import java.util.Locale;
 
 /**
  * The basic implementation of {@link Handler} interface.
@@ -352,7 +353,7 @@ public class PatternHandler implements Handler {
                 throw new IllegalArgumentException("message format is not set but arguments are presented");
             }
 
-            print(loggerName, level, throwable, messageFormat == null ? null : String.format(messageFormat, args));
+            print(loggerName, level, throwable, messageFormat == null ? null : String.format(Locale.CHINA,messageFormat, args));
         }
     }
 
