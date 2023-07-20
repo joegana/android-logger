@@ -2,6 +2,7 @@ package com.justin.test
 
 import android.app.Activity
 import android.os.Bundle
+import com.justin.timber.Timber
 import com.noveogroup.android.log.LoggerManager
 
 /**
@@ -12,6 +13,8 @@ class MainActivity:Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i("%s","就")
+//        Timber.plant(Timber.DebugTree())
+        Timber.d("Timer log 测试")
         Log.d("%就")
         Log.v("%就")
         Log.w("%就")
