@@ -1,12 +1,19 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+ext{
+     package_name = 'com.moorgen.smarthome'
+     artifactVersion = '1.4.0'//release包发布的版本
+
+     artifactory_user='justin'
+     artifactory_password='123456'
+     artifactory_contextUrl='http://192.168.50.6:8081/artifactory/'
+}
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -24,8 +31,33 @@ android {
     }
 }
 
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+afterEvaluate {
+    if(!artifactVersion.endsWith('SNAPSHOT') && !artifactVersion.endsWith('snapshot')){
+        tasks.matching {
+            (it.name.endsWith('artifactoryPublish'))
+        }.each { tk ->
+            tk.dependsOn('assembleRelease', 'generateSourcesJar')
+        }
+    }
+}
+
 dependencies {
-    api 'org.slf4j:slf4j-api:2.0.3'
+    // Android x
+    implementation "androidx.annotation:annotation:1.0.0"
+    // slf4j
+    implementation "org.slf4j:slf4j-api:2.0.3"
+    implementation "org.slf4j:slf4j-log4j12:2.0.3"
+    // log4j
+    implementation "org.apache.logging.log4j:log4j-core:2.3.2"
+    implementation  "org.apache.logging.log4j:log4j-api:2.3.2"
+    implementation "com.lmax:disruptor:3.0.0"
+    // log4android
+    implementation "de.mindpipe.android:android-logging-log4j:1.0.3"
 }
 
 apply from: './logger-maven.gradle'
