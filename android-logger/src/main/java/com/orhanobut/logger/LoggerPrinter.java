@@ -40,7 +40,7 @@ class LoggerPrinter implements Printer {
    */
   private final ThreadLocal<String> localTag = new ThreadLocal<>();
 
-  private static org.slf4j.Logger Log = LoggerFactory.getLogger(LoggerPrinter.class);
+  private static org.slf4j.Logger Log = LoggerFactory.getLogger("default");
 
   @Override public Printer t(String tag) {
     if (tag != null) {
