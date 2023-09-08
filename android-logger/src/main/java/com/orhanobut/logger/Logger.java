@@ -20,6 +20,25 @@ public final class Logger {
   }
 
   /**
+   * just for compatible for Logger api
+   * @param printer
+   */
+  public static void printer(@NonNull Printer printer) {
+  }
+
+  /**
+   * just for compatible for Logger api
+   */
+  public static void addLogAdapter(@NonNull LogAdapter adapter) {
+  }
+
+  /**
+   * just for compatible for Logger api
+   */
+  public static void clearLogAdapters() {
+  }
+
+  /**
    * Given tag will be used as tag only once for this method call regardless of the tag that's been
    * set during initialization. After this invocation, the general tag that's been set will
    * be used for the subsequent log calls

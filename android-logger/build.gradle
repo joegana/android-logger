@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 ext{
      package_name = 'com.moorgen.smarthome'
-     artifactVersion = '1.4.1'//release包发布的版本
+     artifactVersion = '1.4.2'//release包发布的版本
 
      artifactory_user='justin'
      artifactory_password='123456'
