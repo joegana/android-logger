@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-package com.noveogroup.android.log;
+package com.moorgen.android.log;
 
 public final class Utils {
 

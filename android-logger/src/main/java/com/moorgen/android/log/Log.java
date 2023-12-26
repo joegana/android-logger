@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-package com.noveogroup.android.log;
+package com.moorgen.android.log;
 
 /**
  * This class simplifies usage of Android Logger for debugging purposes.

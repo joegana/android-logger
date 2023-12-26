@@ -26,7 +26,7 @@
 
 package org.slf4j.impl;
 
-import com.noveogroup.android.log.LoggerManager;
+import com.moorgen.android.log.LoggerManager;
 import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 

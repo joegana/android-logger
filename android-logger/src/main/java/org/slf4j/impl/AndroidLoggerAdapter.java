@@ -26,7 +26,7 @@
 
 package org.slf4j.impl;
 
-import com.noveogroup.android.log.Logger;
+import com.moorgen.android.log.Logger;
 
 import org.slf4j.helpers.MarkerIgnoringBase;
 import org.slf4j.helpers.MessageFormatter;

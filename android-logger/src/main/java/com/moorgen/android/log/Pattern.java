@@ -1,4 +1,4 @@
-package com.noveogroup.android.log;
+package com.moorgen.android.log;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

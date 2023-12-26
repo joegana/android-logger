@@ -19,14 +19,13 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import static com.moorgen.util.Utils.checkNotNull;
+import static com.orhanobut.logger.Utils.checkNotNull;
 import static com.orhanobut.logger.Logger.ASSERT;
 import static com.orhanobut.logger.Logger.DEBUG;
 import static com.orhanobut.logger.Logger.ERROR;
 import static com.orhanobut.logger.Logger.INFO;
 import static com.orhanobut.logger.Logger.VERBOSE;
 import static com.orhanobut.logger.Logger.WARN;
-import com.moorgen.util.Utils;
 
 class LoggerPrinter implements Printer {
 
