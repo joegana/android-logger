@@ -32,7 +32,7 @@ import org.slf4j.helpers.MarkerIgnoringBase;
 import org.slf4j.helpers.MessageFormatter;
 
 /**
- * A wrapper over {@link com.noveogroup.android.log.Logger com.noveogroup.android.log.Logger}
+ * A wrapper over {@link com.moorgen.android.log.Logger com.moorgen.android.log.Logger}
  * in conforming to the {@link org.slf4j.Logger org.slf4j.Logger} interface.
  */
 public class AndroidLoggerAdapter extends MarkerIgnoringBase {
