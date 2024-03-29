@@ -4,12 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.example.logger_test"
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -30,6 +30,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    implementation "com.moorgen.smarthome:android-logger:$artifactVersion"
     implementation project(':android-logger')
 }
 repositories {

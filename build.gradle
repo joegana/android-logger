@@ -16,5 +16,17 @@ allprojects {
     repositories {
         jcenter()
         google()
+        maven { url "https://mvn.getui.com/nexus/content/repositories/releases/" }
+        maven { url "http://211.91.57.96:8081/artifactory/mg-app-libs-release/" }
+        maven { url "http://211.91.57.96:8081/artifactory/mg-app-libs-snapshot/" }
+//        maven { url "http://192.168.50.6:8081/artifactory/mg-app-libs-release/" }
+//        maven { url "http://192.168.50.6:8081/artifactory/mg-app-libs-snapshot/" }
+        maven { url "https://mvn.getui.com/nexus/content/repositories/releases/" }
+        maven { url 'https://developer.huawei.com/repo/'}
+        maven { url 'https://developer.hihonor.com/repo/'}
     }
+}
+
+ext{
+    artifactVersion = '2.0.2'//release包发布的版本
 }
