@@ -138,6 +138,7 @@ public class LogConfigurator {
 
 		AsyncAppender asyncAppender  = new  AsyncAppender();
 		asyncAppender.setLocationInfo(getLocationInfo());
+		asyncAppender.setName("file");
 		asyncAppender.addAppender(rollingFileAppender);
 
 		root.addAppender(asyncAppender);
@@ -147,6 +148,7 @@ public class LogConfigurator {
 		final Logger root = Logger.getRootLogger();
 		final Layout logCatLayout = new PatternLayout(getLogCatPattern());
 		final LogCatAppender logCatAppender = new LogCatAppender(logCatLayout);
+		logCatAppender.setName("logcat");
 
 		root.addAppender(logCatAppender);
 	}
